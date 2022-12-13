@@ -1,0 +1,10 @@
+package 杜新鹏20009200601;
+import java.util.Scanner;
+public class 日历 {
+	public static void main(String args[]) {
+		int i,j,decision;
+		Scanner in=new Scanner(System.in);
+		println("查询日历请按 1");
+		
+	}
+}

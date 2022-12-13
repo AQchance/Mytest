@@ -1,0 +1,93 @@
+package 杜新鹏20009200601;
+
+public class cankao {
+	public static void main(String args[]) {
+		System.out.println("若要查询某年日历，请输入1，若要查询星期，请输入2");
+		Scanner input=new Scanner(System.in);
+		int choice=input.nextInt();
+		if (choice==1) {
+			System.out.println("请输入年份");
+			int year=input.nextInt();
+			int total=0;
+			String Week="日\t一\t二\t三\t四\t五\t六";
+			boolean isLeap;
+			if ((year%4==0&&year%100!=0)||year%400==0) {
+				isLeap=true;
+			}
+			else isLeap=false;
+			int[]days=new int[isLeap?366:365];
+			for (int i=1900;i<year;i++) {
+				total+= ((i%4==0 && i%100!=0) || i% 400==0) ? 366 : 365;
+			}
+			total%=7;
+			for (int i=0;i<days.length;i++) {
+				total%=7;
+				days[i]=total;
+				total++;
+			}
+			int count=0;
+			int daysmax=31;
+			for (int i=1;i<=12;i++) {
+				System.out.println(year+"年"+i+"月");
+				System.out.println(Week);
+				for (int j=0;j<=days[count];j++) {
+					if ((days[count]+1)%7==0) break;
+					else System.out.print("\t");
+				}
+				switch(i) {
+					case 2:
+						daysmax=isLeap?29:28;
+						break;
+					case 4: case 6: case 9: case 11:
+						daysmax=30;
+						break;
+					case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+						daysmax=31;
+						break;
+				}
+				for (int j=1 ; j<=daysmax ; j++) {
+					System.out.print(j+"\t");
+					if ((days[count]+j+1)%7==0) {
+						System.out.print("\n");
+					}
+				}
+				System.out.print("\n");
+				count+=daysmax;
+			}
+		}
+		if (choice==2) {
+			System.out.println("请输入年月日,以空格间隔");
+			int year=input.nextInt();
+			int month=input.nextInt();
+			int day=input.nextInt();
+			int total=0;
+			boolean isLeap;
+			if ((year%4==0&&year%100!=0)||year%400==0) {
+				isLeap=true;
+			}
+			else isLeap=false;
+			for (int i=1900;i<year;i++) {
+				total+= ((i%4==0 && i%100!=0) || i% 400==0) ? 366 : 365;
+			}
+			int daysmax=31;
+			for(int t=1;t<month;t++) {
+				switch(t) {
+				case 2:
+					daysmax=isLeap?29:28;
+					break;
+				case 4: case 6: case 9: case 11:
+					daysmax=30;
+					break;
+				case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+					daysmax=31;
+					break;
+				}
+				total+=daysmax;
+			}
+			total+=day;
+			total%=7;
+			System.out.println("该日为星期"+""+total);
+		}
+	}
+
+}
