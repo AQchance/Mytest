@@ -8,15 +8,15 @@ data  segment
 	; hex_string db 5 dup(?), 0dh, 0ah, '$'
 	number dw 0
 	highest_digit dw 0
-	err_msg db "Error: 请输入数字！",0dh,0ah,'$'
+	err_msg db "Error: Please input a digit!",0dh,0ah,'$'
 	string_buffer db 128, 128 dup(?),0dh,0ah, '$'
 	line_feed db 0dh,0ah,'$'
-	lint_msg db  '退出',0dh,0ah, '$'
-	lint_msg2 db '该数的二进制编码为： ', '$'
-	lint_msg3 db '请输入一个数（输入q或Q以退出）: ', '$'
-	lint_msg4 db '请输入一个字符串: ',0dh,0ah, '$'
-	lint_msg5 db '字符串中数字的个数为：', '$'
-	lint_msg6 db '十六进制编码为 ', '$'
+	lint_msg db  'exit',0dh,0ah, '$'
+	lint_msg2 db 'The Dec code of the number is ', '$'
+	lint_msg3 db 'Please input a digit(q or Q for quit): ', '$'
+	lint_msg4 db 'Please input a string: ',0dh,0ah, '$'
+	lint_msg5 db 'The number of digits in the string is ', '$'
+	lint_msg6 db 'The hex code is ', '$'
 data  ends
 
 code  segment

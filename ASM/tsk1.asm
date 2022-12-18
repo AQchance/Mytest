@@ -3,14 +3,14 @@ mystack segment stack
 mystack  ends
 
 data  segment
-	my_data db 'hello world'
+	my_data db 'Hello, world!'
 	my_data_length dw $ - offset my_data
-	id db 'id: 20009201256', '$'
-	my_name db 'name: xie kai hua', '$'
-	asc db 'ascii is ', '$'
+	id db 'id: 20009200601', '$'
+	my_name db 'name: Du Xinpeng', '$'
+	asc db 'ASCLL code is ', '$'
 	line_feed db 0dh, 0ah, '$'
-	lint_msg1 db 'please input a letter(q or Q with quit): ', '$'
-	lint_msg2 db 'the ascii code of string "hello world" is:', 0dh, 0ah, '$'
+	lint_msg1 db 'Please input a letter(q or Q with quit): ', '$'
+	lint_msg2 db 'The ascii code of string "Hello, world!" is:', 0dh, 0ah, '$'
 data  ends
 
 code  segment
