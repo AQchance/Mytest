@@ -27,7 +27,6 @@ public:
     {
         const int n = nums.size();
         vector<GCD> gcd(n * (n - 1) / 2);
-        vector<bool> flag(n);         // 用来保存一个数是否用过
         vector<int> calculate(n / 2); // 保存最终用来计算的数
         int ans = 0;
         for (int i = 0, k = 0; i < n; i++)
@@ -41,29 +40,46 @@ public:
             }
         }
         sort(gcd.begin(), gcd.end(), cmp);
-        for (int i = 0, k = 0; i < gcd.size(); i++)
+        // 需要改的是这个循环
+        int maxnum = 0;
+        int use = 0;
+        int j = gcd.size();
+        while (1)
         {
-            int x = gcd[i].v[0];
-            int y = gcd[i].v[1];
-            if (flag[x] == false && flag[y] == false)
+            ans = 0;
+            int i, k;
+            vector<bool> flag(n);         // 用来保存一个数是否用过
+            for (i = use++, k = 0; i < j && k < n / 2; i++)
             {
-                calculate[k++] = gcd[i].cn2;
-                flag[x] = true;
-                flag[y] = true;
+                int x = gcd[i].v[0];
+                int y = gcd[i].v[1];
+                if (flag[x] == false && flag[y] == false)
+                {
+                    calculate[k++] = gcd[i].cn2;
+                    flag[x] = true;
+                    flag[y] = true;
+                }
             }
+            if (i + 1 < gcd.size())
+                j = i + 1;
+            else 
+                j=i;
+            if (k < n / 2)
+                break;
+            for (i = 0; i < n / 2; i++)
+            {
+                ans += (n / 2 - i) * calculate[i];
+            }
+            maxnum = max(maxnum, ans);
         }
-        for (int i = 0; i < n / 2; i++)
-        {
-            ans += (n / 2 - i) * calculate[i];
-        }
-        return ans;
+        return maxnum;
     }
 };
 
 int main()
 {
     Solution sol;
-    vector<int> a = {415,230,471,705,902,87};
+    vector<int> a = {9,17,16,15,18,13,18,20};
     cout << sol.maxScore(a) << endl;
     return 0;
 }
