@@ -12,7 +12,7 @@ public:
             return 0;
         if (x == -2147483648)
             return 0;
-            bool flag = true;
+        bool flag = true;
         if (x < 0)
         {
             flag = false;
@@ -48,8 +48,8 @@ public:
 
 int main()
 {
-    int x=465132;
+    int x = 465132;
     Solution sol;
-    cout<<sol.reverse(x)<<endl;
+    cout << sol.reverse(x) << endl;
     return 0;
 }
