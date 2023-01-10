@@ -1,0 +1,23 @@
+artist_names,artists_id,danceability,energy,valence,tempo,loudness,mode,key,acousticness,instrumentalness,liveness,speechiness,explicit,duration_ms,popularity,year,release_date,song_title (censored)
+John Cage,[183867],0.471,0.216,0.111,144.53,-20.269,1,5,0.992,0.905,0.184,0.053,0,167000,2,1951,1/1/1951,Sonatas and Interludes for Prepared Piano: Fourth Interlude
+John Cage,[183867],0.202,0.0048,0.195,68.527,-37.422,1,10,0.994,0.938,0.0772,0.0397,0,531827,50,2002,5/13/2002,In a Landscape
+John Cage,[183867],0.566,0.0698,0.171,80.128,-22.596,0,9,0.984,0.454,0.0943,0.0659,0,247000,2,1951,1/1/1951,Sonatas and Interludes for Prepared Piano: Sonata XIII
+John Cage,[183867],0.409,0.0347,0.176,120.433,-31.795,1,5,0.994,0.946,0.131,0.039,0,431000,2,1951,1/1/1951,Sonatas and Interludes for Prepared Piano: Sonatas XIV and XV
+John Cage,[183867],0.525,0.0646,0.325,99.29,-24.953,0,4,0.982,0.74,0.151,0.0979,0,144760,3,1951,1/1/1951,Sonatas and Interludes for Prepared Piano: Sonata VI
+John Cage,[183867],0.416,0.0235,0.057,84.96,-20.999,1,7,0.984,0.736,0.126,0.113,0,216000,2,1951,1/1/1951,Sonatas and Interludes for Prepared Piano: Sonata X
+John Cage,[183867],0.208,0.00643,0.476,66.289,-44.347,0,2,0.992,0.935,0.0849,0.0433,0,768173,46,2005,6/6/2005,In A Landscape
+John Cage,[183867],0.514,0.1,0.228,117.326,-29.905,1,5,0.991,0.934,0.115,0.0419,0,227240,3,1951,1/1/1951,Sonatas and Interludes for Prepared Piano: First Interlude
+John Cage,[183867],0.566,0.26,0.174,111.067,-17.251,0,4,0.988,0.817,0.132,0.0439,0,257000,2,1951,1/1/1951,Sonatas and Interludes for Prepared Piano: Sonata XII
+John Cage,[183867],0.5,0.143,0.296,115.005,-24.444,1,0,0.992,0.852,0.12,0.0488,0,149133,5,1951,1/1/1951,Sonatas and Interludes for Prepared Piano: Sonata II
+John Cage,[183867],0.633,0.0108,0.16,135.519,-21.35,0,9,0.944,0.195,0.194,0.163,0,186867,7,1951,1/1/1951,Sonatas and Interludes for Prepared Piano: Sonata I
+John Cage,[183867],0.545,0.0765,0.0463,120.576,-22.484,0,11,0.98,0.831,0.155,0.0647,0,91733,5,1951,1/1/1951,Sonatas and Interludes for Prepared Piano: Sonata V
+John Cage,[183867],0.511,0.0331,0.151,69.648,-21.835,1,0,0.991,0.78,0.103,0.0576,0,303160,1,1951,1/1/1951,Sonatas and Interludes for Prepared Piano: Sonata XVI
+Tangerine Dream,[2411],0.109,0.0157,0.0381,91.75,-28.469,0,2,0.996,0.993,0.0778,0.0397,0,141476,31,1974,2/20/1974,Sequent 'C' - Remastered ****
+Tangerine Dream,[2411],0.102,0.535,0.0739,84.084,-16.7,1,7,0.845,0.933,0.22,0.0976,0,584129,30,1974,2/20/1974,Mysterious Semblance At The Strand Of ********** - Remastered ****
+Tangerine Dream,[2411],0.251,0.348,0.0361,130.186,-20.339,0,10,0.843,0.917,0.196,0.0534,0,1037451,30,1975,3/21/1975,Rubycon - Pt. * / Remastered ****
+Tangerine Dream,[2411],0.456,0.335,0.251,177.1,-14.083,0,4,0.918,0.872,0.217,0.0344,0,635745,31,1976,10/1/1976,Stratosfear
+Tangerine Dream,[2411],0.148,0.581,0.0932,80.513,-10.536,0,9,0.603,0.583,0.342,0.0479,0,1100211,29,1979,2/1/1979,Force Majeure
+Tangerine Dream,[2411],0.314,0.352,0.083,137.949,-12.653,1,2,0.827,0.326,0.093,0.0317,0,1192173,27,1980,5/1/1980,Tangram (Set ** - **** Remaster
+Tangerine Dream,[2411],0.275,0.381,0.0648,148.955,-18.374,0,2,0.87,0.932,0.0865,0.042,0,1059351,38,1974,2/20/1974,Phaedra - Remastered ****
+Tangerine Dream,[2411],0.387,0.564,0.0489,138.024,-11.253,0,4,0.111,0.841,0.0791,0.0376,0,448596,42,1979,2/1/1979,Cloudburst Flight
+Tangerine Dream,[2411],0.285,0.422,0.515,122.497,-19.403,0,0,0.94,0.861,0.295,0.215,0,477323,33,1974,2/20/1974,Movements Of A Visionary - Remastered ****
