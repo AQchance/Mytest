@@ -3,6 +3,7 @@ import math
 import csv
 from numpy import *
 
+
 data = pd.read_csv('data2.csv')
 mydata = pd.read_csv('data4.csv')
 
