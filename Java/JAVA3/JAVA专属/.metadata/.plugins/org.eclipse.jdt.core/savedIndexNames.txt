@@ -1,2 +1,0 @@
-INDEX VERSION 1.130+C:\Users\lenovo\Desktop\JAVA3\.metadata\.plugins\org.eclipse.jdt.core
-1603394322.index
