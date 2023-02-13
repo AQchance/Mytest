@@ -10,7 +10,7 @@ const int N = 10000;
 int main()
 {
 	//读取数据文件
-	ifstream in("C:\\Users\\lenovo\\Desktop\\simulate.txt", ios::in);
+	ifstream in("simulate.txt", ios::in);
 	if (!in.is_open())
 	{
 		cout << "open error!" << endl;
@@ -35,8 +35,8 @@ int main()
 	}
 	σ2 = σ2 / (N - 1);
 	double σ = sqrt(σ2);
-	cout << "平均值: " << average << endl;
-	cout << "方差: " << σ2 << endl;
+	cout << "平均值：" << average << endl;
+	cout << "方差：" << σ2 << endl;
 	cout << "标准差: " << σ << endl;
 	cout << "置信区间: " << "[" << average - 1.96 * σ / sqrt(N) << ", "
 		<< average + 1.96 * σ / sqrt(N) << "]" << endl;
