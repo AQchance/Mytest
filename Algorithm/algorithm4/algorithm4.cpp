@@ -8,8 +8,10 @@
 using std::cin;
 using std::cout;
 using std::endl;
+using std::ifstream;
 using std::string;
 using std::vector;
+using namespace std;
 
 const int MAX_CHAR_ASCLL = 255;
 int shift[MAX_CHAR_ASCLL];
@@ -58,17 +60,27 @@ int calculate_index(int k, string txt)
 // 使用更加高效的Sunday算法来进行模式匹配
 int main()
 {
-    std::ifstream in("C:\\Users\\lenovo\\Desktop\\message.txt");
-    string txt((std::istreambuf_iterator<char>(in)), std::istreambuf_iterator<char>());
+    std::ifstream sin("C:\\Users\\lenovo\\Desktop\\message.txt");
+    string txt((std::istreambuf_iterator<char>(sin)), std::istreambuf_iterator<char>());
     string mystring;
-    while (1)
+    ifstream in("C:\\Users\\lenovo\\Desktop\\in.txt", ios::in);
+    if (!in.is_open())
     {
-        getline(cin, mystring);
-        if (mystring == "-1")
-            return 0;
-        int k = Sunday(txt, mystring);
-        k = calculate_index(k, txt);
-        cout << k << "  " << mystring << endl;
+        cerr << "open error!" << endl;
+        exit(0);
     }
+    vector<string> vec;
+    while (!in.eof())
+    {
+        in >> mystring;
+        vec.push_back(mystring);
+    }
+    for (int i = 0; i < vec.size(); i++)
+    {
+        int k = Sunday(txt, vec[i]);
+        k = calculate_index(k, txt);
+        cout << k << "  " << vec[i] << endl;
+    }
+    cout<<"End!"<<endl;
     return 0;
 }
