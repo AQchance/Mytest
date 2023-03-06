@@ -69,3 +69,4 @@ for i in range(0,7):
 #             c+=data1[k]*data2[k]
 #         cos = c/math.sqrt(a2*b2)
 #         print(data.iloc[i][0], "数量级与", data.iloc[j][0], "数量级之间的余弦相似度为：",cos)
+
