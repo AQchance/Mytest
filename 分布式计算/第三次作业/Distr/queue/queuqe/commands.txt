@@ -1,0 +1,17 @@
+mvn clean
+mvn compile
+/*连续向队列中发送一系列消息*/
+mvn exec:java -Dexec.mainClass="Publisher"
+
+/*通过http://127.0.0.1:8161/admin/queues.jsp控制台观察 是否有名为“TEST”的队列被创建，是否缓存了消息 */
+
+/*用同步方式从队列中接收消息*/
+mvn exec:java -Dexec.mainClass="SyncConsumer"
+
+/*用异步方式从队列中接收消息*/
+mvn exec:java -Dexec.mainClass="ASyncConsumer"
+
+
+
+
+
