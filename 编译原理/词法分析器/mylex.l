@@ -69,7 +69,9 @@ set  {printf("Identify keywords: SET.");return SET;}
 "+"		|
 "-"		|
 "*"		|
-"/"		{return yytext[0];}
+"/"		|
+"."		|
+"!"		{return yytext[0];}
 
 .       ECHO;
 %%
