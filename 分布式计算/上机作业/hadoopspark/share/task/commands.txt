@@ -1,0 +1,13 @@
+mvn clean
+mvn package
+
+hadoop fs -mkdir /input
+hadoop fs -put ./grades.txt /input
+hadoop fs -cat /input/grades.txt
+
+hadoop jar ./target/StudentAverageScore.jar com.org.xidian.StudentAverageScore /input/grades.txt /output1
+
+hadoop fs -ls /output1
+hadoop fs -cat /output1/part-r-00000
+hadoop fs -rm -r /output1
+

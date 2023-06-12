@@ -1,0 +1,10 @@
+sudo docker-compose up -d
+sudo docker ps
+ssh -p 2222 root@localhost
+
+
+start-dfs.sh
+
+
+stop-dfs.sh
+

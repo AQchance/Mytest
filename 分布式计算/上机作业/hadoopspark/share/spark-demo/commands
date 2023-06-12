@@ -1,0 +1,12 @@
+mvn clean
+mvn package
+
+hadoop fs -put ./input_file.txt /
+hadoop fs -cat /input_file.txt
+
+spark-submit --class org.apache.spark.examples.WordCount --master local ./target/spark-examples-1.0.jar /input_file.txt
+
+hadoop fs -ls /output
+hadoop fs -cat /output/part-r-00000
+hadoop fs -rm -r /output
+

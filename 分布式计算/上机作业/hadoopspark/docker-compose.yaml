@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+
+  singlenode:
+    image: ubuntu-jdk8-hadoop-spark:v2
+    volumes:
+      - "./share:/root/share"
+    restart: always
+    hostname: hadoopspark
+    ports:
+      - "2222:22"
+      - "5900:5900"
+      - "9864:9864"
+      - "9870:9870"
+      - "9000:9000"
+
+networks:
+  default:
+    driver: bridge
+
+volumes:
+  dnsocket:
+    driver: local

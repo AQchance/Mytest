@@ -1,0 +1,15 @@
+mvn clean
+mvn package
+
+hadoop fs -mkdir /input
+hadoop fs -put ./child_parent.txt /input
+hadoop fs -cat /input/child_parent.txt
+
+hadoop jar ./target/GrandchildGrandparent.jar com.org.xidian.GrandchildGrandparent /input/child_parent.txt /output3
+
+hadoop fs -ls /output3
+hadoop fs -cat /output3/part-r-00000
+hadoop fs -rm -r /output3
+
+
+
