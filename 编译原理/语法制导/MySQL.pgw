@@ -1,0 +1,22 @@
+[Application]
+WindowPlacement=2 3 -32000 -32000 -1 -1 -9 0 770 601
+[Editor1]
+FileName=.\mysql4yacc.y
+ReadOnly=0
+WindowPlacement1=2 3 0 698 -8 -31 65 306 1363 810
+WindowOrder1=1
+Position001=0 256
+Cursor001=51 1385 55 1385
+Bookmark1=493
+Bookmark2=1288
+SyntaxColouring=2
+TargetSyntaxColouring=3
+[Editor2]
+FileName=.\mysql4lex.l
+ReadOnly=0
+WindowPlacement1=0 1 -1 -1 -8 -31 52 52 1350 556
+WindowOrder1=2
+Position001=0 146
+Cursor001=4 22 4 22
+SyntaxColouring=1
+TargetSyntaxColouring=3
