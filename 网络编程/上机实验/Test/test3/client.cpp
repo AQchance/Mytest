@@ -8,7 +8,7 @@ int main()
 	WSADATA wsaData;
 	WSAStartup(MAKEWORD(2, 2), &wsaData);
 
-	fputs("ip: ", stdout);
+	fputs("ipaddress: ", stdout);
 	char host[64];
 	scanf("%s", host);
 
