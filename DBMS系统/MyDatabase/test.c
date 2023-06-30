@@ -3,6 +3,6 @@
 
 int main()
 {
-    CreateDataBaseTxt();
+    CreateDataBase("MyDataBase");
     return 0;
 }

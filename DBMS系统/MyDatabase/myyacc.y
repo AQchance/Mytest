@@ -1,5 +1,6 @@
 %{
     #include <stdio.h>
+    #include "include/dbms.h"
     void yyerror(const char* msg) {
         printf("Syntax error!\n");
     }
@@ -48,7 +49,7 @@ statements  :   statements  statement   {printf("YES!\n");}
             ;
 
 
-statement   :   createsql
+statement   :   createsql   {CreateDataBase("MyDataBase");}
             |   insertsql
             |   selectsql
             |   deletesql

@@ -1,16 +1,33 @@
 #include <stdio.h>
-
-int CreateDataBaseTxt()
+#include <stdlib.h>
+#include <sys/stat.h>
+#include <string.h>
+int CreateDataBase(char *dbname)
 {
-    FILE *file = fopen("database.txt", "w"); // 打开文件以写入模式创建
 
-    if (file == NULL)
+    if (mkdir(dbname, S_IRWXU) == 0)
     {
-        printf("数据库文件创建失败！\n");
-        return 0;
+        printf("数据库创建成功！\n");
+
+        char filename[100]={'\0'};
+        strcat(filename, dbname);
+        strcat(filename, "/");
+        strcat(filename, dbname);
+        strcat(filename, ".txt");
+        FILE* file = fopen(filename, "w");
+        if (file != NULL) {
+
+            printf("数据库文件创建成功！\n");
+            // 关闭文件
+            fclose(file);
+        }
+        else{
+            printf("数据库文件创建失败！\n");
+        }
+        return 1;
     }
     else{
-        printf("数据库文件创建成功！\n");
-        return 1;
+        printf("数据库创建失败！数据库可能已经存在！\n");
+        return 0;
     }
 }
